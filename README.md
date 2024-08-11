@@ -30,7 +30,6 @@
      let rx = Client::connect(2.);
 
      let mut var_headers = std::collections::HashMap::new();
-     # return; // exit out of doc test
      for packet in rx {
          match packet {
              UpdatePacket::Data(data) => handle_data_update(&data, &var_headers),
