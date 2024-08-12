@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Default, Deserialize, Serialize)]
 #[serde(rename_all = "PascalCase")]
+#[serde(default)]
 pub struct RadioInfo {
     pub selected_radio_num: i32,
     pub radios: Vec<RadioData>,
@@ -9,6 +10,7 @@ pub struct RadioInfo {
 
 #[derive(Debug, Clone, Deserialize, Default, Serialize)]
 #[serde(rename_all = "PascalCase")]
+#[serde(default)]
 pub struct RadioData {
     pub radio_num: i32,
     pub hop_count: i32,
@@ -20,6 +22,7 @@ pub struct RadioData {
 
 #[derive(Debug, Clone, Deserialize, Default, Serialize)]
 #[serde(rename_all = "PascalCase")]
+#[serde(default)]
 pub struct RadioFrequencyData {
     pub frequency_num: i32,
     pub frequency_name: String,
